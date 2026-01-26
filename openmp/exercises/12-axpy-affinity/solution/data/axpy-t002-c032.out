@@ -1,0 +1,10 @@
+Array size n = 102400000
+CCE OMP: host nid002275 pid 60470 tid 60470 thread 0 affinity:  0
+CCE OMP: host nid002275 pid 60470 tid 60471 thread 1 affinity:  16
+Input:
+a =   3.0000
+x =   0.0000   0.0000   0.0000   0.0000 ...   1.0000   1.0000   1.0000   1.0000
+y =   0.0000   0.0000   0.0000   0.0000 ... 100.0000 100.0000 100.0000 100.0000
+Output:
+y =   0.0000   0.0000   0.0000   0.0000 ... 103.0000 103.0000 103.0000 103.0000
+Calculating axpy took 30.934 milliseconds

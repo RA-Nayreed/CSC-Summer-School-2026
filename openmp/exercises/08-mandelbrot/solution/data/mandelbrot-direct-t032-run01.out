@@ -1,0 +1,4 @@
+Image size: 4096x4096
+Calculation took 105.834 milliseconds
+Writing file took 21.919 milliseconds
+Mandelbrot data saved to image.bin

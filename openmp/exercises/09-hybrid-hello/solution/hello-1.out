@@ -1,0 +1,12 @@
+Hello from thread 0 in process 0!
+Hello from thread 2 in process 0!
+Hello from thread 3 in process 0!
+Hello from thread 1 in process 0!
+Hello from thread 1 in process 2!
+Hello from thread 0 in process 2!
+Hello from thread 3 in process 2!
+Hello from thread 2 in process 2!
+Hello from thread 1 in process 1!
+Hello from thread 0 in process 1!
+Hello from thread 2 in process 1!
+Hello from thread 3 in process 1!
