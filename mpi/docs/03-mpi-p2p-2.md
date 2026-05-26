@@ -126,7 +126,7 @@ MPI_Probe(`source`{.input}, `tag`{.input}, `comm`{.input}, `status`{.output})
 - Can be used to determine the size of the incoming data<br>
   → Use to allocate large enough buffer for `MPI_Recv`
 
-<small>Exercise: `message-length`</small>
+<small>Exercise: `04-message-length`</small>
 
 # Common communication patterns {.section}
 
@@ -172,11 +172,13 @@ if (0 == rank) {
 
 # Generalizing to arbitrary number of processes
 
-- Avoid hard-coding the `source`  and `destination` arguments (like in most illustratory examples thus far)
-  - Such a program would work correctly only with a fixed number of processes
-- Better approach: Store `source` and `destination` in variables and place MPI calls outside `if`s when possible
-  - This produces typically code that is easier to read
-  - The program is generalizable to arbitrary number of processes
+Real codes should typically work with any (reasonable) number of MPI tasks.
+
+- Avoid hard-coding `source` and `destination` arguments (not like in our snippets so far!)
+  - For example, store `source`, `destination` in variables and place MPI calls outside `if`s
+- Try to handle cases where the data is not evenly divisible to the number of processes
+
+<small>Exercise: `06-parallel-pi-general`</small>
 
 
 # Example
