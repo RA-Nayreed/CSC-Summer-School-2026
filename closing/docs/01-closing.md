@@ -88,7 +88,7 @@ lang:   en
 
 # Bus to Helsinki
 
-- Bus to Helsinki leaves at 13. Please be at the hotel lobby by 12:55
+- Bus to Helsinki leaves at 13:00. Please be at the hotel lobby by 12:55
 - Please let us know if you are not taking the bus
 
 
