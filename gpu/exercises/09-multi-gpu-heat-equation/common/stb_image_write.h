@@ -1722,3 +1722,9 @@ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ------------------------------------------------------------------------------
 */
+/*
+ * Copyright (C) 2017 Sean Barrett
+ * SPDX-FileCopyrightText: 2017 Sean Barrett
+ *
+ * SPDX-License-Identifier: MIT
+ */
