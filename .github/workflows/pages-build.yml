@@ -42,6 +42,10 @@ jobs:
               --info_content "Updated for [$GIT_SHORT_SHA]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$GITHUB_SHA) ($GIT_DATE)" \
               $ARGS
 
+          # Allow choosing open accordion with ?open=..
+          # TODO: PR to slidefactory
+          bash tools/patch-index-open.sh build/index.html
+
       - name: Upload slide artifact
         uses: actions/upload-artifact@v4
         with:
