@@ -60,9 +60,8 @@ jobs:
           <html lang="en">
           <head>
             <meta charset="UTF-8" />
-            <meta http-equiv="refresh" content="0; url=./main/index.html" />
             <script>
-              window.location.replace('./main/index.html');
+              window.location.replace('./main/index.html' + window.location.search + window.location.hash);
             </script>
             <title>CSC Summer School in High-Performance Computing</title>
           </head>
