@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 CSC - IT Center for Science Ltd. <www.csc.fi>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 # hdf5-partial-write
 
 This exercise practices the use of HDF5 hyperslabs for writing partial data to a larger dataset. This is a common task

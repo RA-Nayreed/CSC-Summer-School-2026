@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 CSC - IT Center for Science Ltd. <www.csc.fi>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 # HDF5 exercise instructions
 
 In order to compile and run the HDF5 code examples and exercises you must have an MPI-aware HDF5 library available on your system, and instruct the compiler to link to `libhdf5`.
@@ -5,7 +11,7 @@ In order to compile and run the HDF5 code examples and exercises you must have a
 ## HDF5 on CSC systems
 
 - Lumi:
-    1. `module load cray-hdf5-parallel/1.12.2.11`
+    1. `module load cray-hdf5-parallel`
     2. Compile with the Cray compiler wrapper `cc` as usual. No special compilation flags needed, the wrapper handles those automatically.
 - Mahti:
     1. `module load hdf5/1.10.7-mpi`

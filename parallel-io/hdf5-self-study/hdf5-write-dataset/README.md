@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 CSC - IT Center for Science Ltd. <www.csc.fi>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 # hdf5-write-dataset
 
 This exercise practices HDF5 file creation and writing of multidimensional datasets. Have a look at the unfinished code

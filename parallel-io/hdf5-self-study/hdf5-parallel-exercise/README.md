@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 CSC - IT Center for Science Ltd. <www.csc.fi>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 # HDF5-parallel-exercise
 
 This exercise practices the use of parallel I/O and hyperslabs in HDF5. You should be familiar with the [parallel HDF5 sample code](../hdf5-parallel-example/) before starting with this exercise.

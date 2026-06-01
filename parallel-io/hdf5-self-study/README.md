@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2025 CSC - IT Center for Science Ltd. <www.csc.fi>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 # Self study material on HDF5
 
 HDF5 is a file format (suffix `.h5` or `.hdf5`) that has become popular in scientific and industrial computing due to
@@ -70,9 +76,6 @@ may itself be a complex object ("heterogeneous data").
 There is no limit on how big the datasets can be; HDF5 can hold arbitrarily large amounts of data.
 HDF5 has a complex, filesystem-like structure that allows one file to hold many datasets in an organized fashion.
 
-![](./img/hdf5_structure.png)
-*HDF5 file structure. "Groups" are analogous to directories on a Unix-like filesystem, and "datasets" then correspond to files.*
-
 As is appropriate for multidimensional arrays, HDF5 also stores **shape** information for each dataset.
 In practice, HDF5 associates each dataset with a **dataspace** object, which is the HDF5 abstraction of a
 multidimensional grid. A dataspace defines just the number and layout of grid points, but does not say anything about
@@ -84,7 +87,7 @@ its rows and columns. In the API, dataspaces are used whenever shape or grid inf
 The last two requirements make it possible to perform I/O operations only to parts of a larger dataset.
 
 ![](./img/hdf5_dataset.png)
-*Example HDF5 dataset and its metadata. Image taken from https://portal.hdfgroup.org/documentation/hdf5/latest/_intro_h_d_f5.html.*
+*Example HDF5 dataset and its metadata. Image (c) The HDF Group (BSD-3.0)*
 
 In addition to dataset shape (its dataspace), HDF5 associates datasets with metadata such as type information of
 the data elements (integer, floating point, etc). It is also possible to write user-specified **attributes**

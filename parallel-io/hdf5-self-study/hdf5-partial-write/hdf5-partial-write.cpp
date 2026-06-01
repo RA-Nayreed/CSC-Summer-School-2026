@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2025 CSC - IT Center for Science Ltd. <www.csc.fi>
+//
+// SPDX-License-Identifier: MIT
+
 #include <hdf5.h> // C-style HDF5 API
 #include <mpi.h>
 

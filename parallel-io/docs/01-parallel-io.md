@@ -1,4 +1,8 @@
 ---
+# SPDX-FileCopyrightText: 2013 CSC - IT Center for Science Ltd. <www.csc.fi>
+#
+# SPDX-License-Identifier: CC-BY-4.0
+
 title:  Input/Output (I/O) in HPC
 event:  CSC Summer School in High-Performance Computing 2025
 lang:   en
@@ -241,13 +245,7 @@ The most popular I/O libraries in HPC are **`HDF5`** and **`netCDF`**.
 - HDF5 files consist of *datasets* organized into *groups*, and their associated *metadata*
     - In practice, dataset = multidimensional array
 
-<div class="column">
-![](img/hdf5_structure.png)
-</div>
-
-<div class="column">
-![](img/hdf5.png)
-</div>
+![](../hdf5-self-study/img/hdf5_dataset.png)
 
 
 # Using HDF5
@@ -259,7 +257,7 @@ The most popular I/O libraries in HPC are **`HDF5`** and **`netCDF`**.
 import h5py
 myFile = h5py.File("some_file.hdf5", 'r') # Behaves like a Python dict
 dataset_names = list(myFile .keys())
-dataset = myFile['some_dataset']         # Behaves like a NumPy array
+dataset = myFile['some_dataset']          # Behaves like a NumPy array
 ```
 
 - HDF5 I/O is supported by many scientific software (`Paraview`, `Matlab`, ...)

@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2024 CSC - IT Center for Science Ltd. <www.csc.fi>
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
 # Lustre striping demo
 
 Lustre commands for setting and displaying stripe properties:
