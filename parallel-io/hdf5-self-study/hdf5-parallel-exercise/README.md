@@ -6,10 +6,10 @@ SPDX-License-Identifier: CC-BY-4.0
 
 # HDF5-parallel-exercise
 
-This exercise practices the use of parallel I/O and hyperslabs in HDF5. You should be familiar with the [parallel HDF5 sample code](../hdf5-parallel-example/) before starting with this exercise.
+This exercise practises the use of parallel I/O and hyperslabs in HDF5. You should be familiar with the [parallel HDF5 sample code](../hdf5-parallel-example/) before starting with this exercise.
 
 Your task is to produce an HDF5 dataset where each MPI process writes a different amount of data. Consider the following setup:
-- Each MPI process creates an array of `rank + 1` integers and initializes all array elements to `rank`. Ie: rank 0 has array `{ 0 }`, rank 1 has array `{ 1 1 }`, and so on.
+- Each MPI process creates an array of `rank + 1` integers and initializes all array elements to `rank`. I.e.: rank 0 has array `{ 0 }`, rank 1 has array `{ 1 1 }`, and so on.
 
 Your task is to write the arrays to a HDF5 file as a continuous, ordered dataset using parallel I/O. Instructions:
 1. Initialize MPI and setup a HDF5 file for parallel writing.
