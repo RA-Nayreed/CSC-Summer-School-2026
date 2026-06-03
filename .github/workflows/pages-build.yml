@@ -22,7 +22,7 @@ jobs:
       image: ghcr.io/csc-training/slidefactory:3.4.3
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Build slides
         env:
@@ -47,7 +47,7 @@ jobs:
           bash tools/patch-index-open.sh build/index.html
 
       - name: Upload slide artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ inputs.slides_artifact }}
           path: ./build
