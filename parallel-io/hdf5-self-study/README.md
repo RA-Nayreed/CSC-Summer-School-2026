@@ -87,6 +87,7 @@ its rows and columns. In the API, dataspaces are used whenever shape or grid inf
 The last two requirements make it possible to perform I/O operations only to parts of a larger dataset.
 
 ![](./img/hdf5_dataset.png)
+
 *Example HDF5 dataset and its metadata. Image (c) The HDF Group (BSD-3.0)*
 
 In addition to dataset shape (its dataspace), HDF5 associates datasets with metadata such as type information of
