@@ -272,7 +272,7 @@ Attributes can be created using the [`H5Acreate function`](https://docs.hdfgroup
 This requires the following arguments:
 - A valid dataset ID to which the attribute will be attached to.
 - A name for the attribute (string).
-- Type of the attribute (built-in HDF5 type identifier). For example, `H5T_NATIVE_DOUBLE` for a `double` valued attribute.
+- Type of the attribute (built-in HDF5 type identifier). For example, `H5T_NATIVE_DOUBLE` for a `double`-valued attribute.
 - Dataspace ID that specifies shape/layout of the metadata. Attributes are allowed to be multidimensional (like datasets),
 but scalar-valued attribute fields are quite common. For example, to write a single number as an attribute we can
 use a dataspace created with the `H5S_SCALAR` flag.
