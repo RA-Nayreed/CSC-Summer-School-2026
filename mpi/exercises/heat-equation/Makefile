@@ -77,7 +77,7 @@ _SRCS   := $(wildcard $(SRCDIR)/*.c)
 OBJS    := $(patsubst $(SRCDIR)/%.c,$(BUILDDIR)/%.o,$(_SRCS))
 _LINKER  = $(CC)
 _LFLAGS  = $(CCFLAGS)
-# C doesn't link math library automatically (in C++ we get it through libstdc++)
+# Explicitly link math library (in C++ we get it through libstdc++)
 LIBS    += -lm
 else ifeq ($(_LANG),fortran)
 _SRCS   := $(wildcard $(SRCDIR)/*.F90)
