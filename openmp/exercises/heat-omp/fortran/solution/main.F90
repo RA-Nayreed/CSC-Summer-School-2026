@@ -1,0 +1,92 @@
+! SPDX-FileCopyrightText: 2010 CSC - IT Center for Science Ltd. <www.csc.fi>
+!
+! SPDX-License-Identifier: MIT
+
+! Heat equation solver in 2D.
+
+program heat_solve
+  use heat
+  use core
+  use io
+  use setup
+  use utilities
+#ifdef _OPENMP
+  use omp_lib
+#endif
+
+  implicit none
+
+  real(dp), parameter :: a = 0.5 ! Diffusion constant
+  type(field) :: current, previous    ! Current and previus temperature fields
+
+  real(dp) :: dt     ! Time step
+  integer :: nsteps       ! Number of time steps
+  integer :: num_threads = 1  ! Number of threads
+  integer, parameter :: image_interval = 100 ! Image output interval
+
+  integer :: iter
+
+  real(dp) :: average_temp   !  Average temperature
+
+  real(kind=dp) :: start_time, stop_time ! Timers
+
+
+  !$omp parallel
+  !$omp single
+#ifdef _OPENMP
+  num_threads = omp_get_num_threads()
+#endif
+  !$omp end single
+  !$omp end parallel
+
+  call initialize(current, previous, nsteps)
+
+  ! Draw the picture of the initial state
+  call write_field(current, 0)
+
+  average_temp = average(current)
+  write(*,'(A, I5, A, I5, A, I5)') 'Simulation grid: ', current%nx, ' x ', &
+       & current%ny, ' time steps: ', nsteps
+  write(*,'(A, I0)') 'Number of threads: ', num_threads
+  write(*,'(A,F9.6)') 'Average temperature at start: ', average_temp
+
+  ! Largest stable time step
+  dt = current%dx**2 * current%dy**2 / &
+       & (2.0 * a * (current%dx**2 + current%dy**2))
+
+  ! Main iteration loop, save a picture every
+  ! image_interval steps
+
+  start_time = wtime()
+
+  do iter = 1, nsteps
+     call evolve(current, previous, a, dt)
+     if (mod(iter, image_interval) == 0) then
+        call write_field(current, iter)
+     end if
+     call swap_fields(current, previous)
+  end do
+
+  stop_time = wtime()
+
+  ! Average temperature for reference
+  average_temp = average(previous)
+
+  write(*,'(A,F7.3,A)') 'Iteration took ', stop_time - start_time, ' seconds.'
+  write(*,'(A,F9.6)') 'Average temperature: ',  average_temp
+  if (command_argument_count() == 0) then
+      write(*,'(A,F9.6)') 'Reference value with default arguments: ', 59.281239
+  end if
+
+  call finalize(current, previous)
+
+contains
+
+  real(8) function wtime()
+    implicit none
+    integer(kind=8) :: count, count_rate
+    call system_clock(count, count_rate)
+    wtime = real(count, kind=8) / real(count_rate, kind=8)
+  end function wtime
+
+end program heat_solve

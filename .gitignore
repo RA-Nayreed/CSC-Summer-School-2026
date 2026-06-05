@@ -22,6 +22,8 @@ a.out
 heat_*.png
 heat
 heat_mpi
+heat_omp
+heat_hybrid
 
 #ignore default SLURM output files
 slurm-*.out
