@@ -38,4 +38,8 @@ SPDX-License-Identifier: CC-BY-4.0
 
 - [Inspect and control affinity](11-affinity)
 - [First-touch-aware axpy](12-axpy-affinity)
-- [Hybrid heat equation](13-heat-hybrid)
+
+### Heat equation
+
+- [OpenMP heat equation](heat-omp)
+- [Hybrid MPI+OpenMP heat equation](heat-hybrid)
