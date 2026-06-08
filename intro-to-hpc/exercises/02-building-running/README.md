@@ -51,17 +51,3 @@ In this exercise we get practice on editing files, loading modules, compiling co
 
    The parameters like `--nodes=...` are the same in all different ways of executing.
    Feel free to use the way that is most convenient for you during the summer school.
-
-
-## Building and running GPU code
-
-0. Load the environment for GPU codes (run this in a fresh terminal):
-
-       module load LUMI/24.03
-       module load partition/G
-       module load rocm/6.0.3
-
-1. Build the code in the [gpu](gpu) directory with `make`.
-2. Run the resulting executable `prog` via batch system by using an example batch job script `job_gpu.sh`.
-   Note the main differences between `job_cpu.sh` and `job_gpu.sh`: the partition names are different and
-   for GPU job we define `--gpus-per-node=...` to request a number GPUs per node.
