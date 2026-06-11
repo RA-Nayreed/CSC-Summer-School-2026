@@ -180,7 +180,7 @@ all the general partitions available on LUMI.
 
 ### CPU jobs
 
-Example `job.sh` for running MPI+OpenMP program reserving 1 node, 4 tasks per node, and 2 CPU core per task, i.e., 8 CPU cores within one node in total:
+Example `job.sh` for running MPI+OpenMP program reserving 1 node, 4 tasks per node, and 2 CPU core per task, as well as 1 GB RAM per core, i.e., 8 CPU cores and 8 GB RAM within one node in total:
 
 ```bash
 #!/bin/bash
@@ -191,6 +191,7 @@ Example `job.sh` for running MPI+OpenMP program reserving 1 node, 4 tasks per no
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4
 #SBATCH --cpus-per-task=2
+#SBATCH --mem-per-cpu=1G
 #SBATCH --time=00:05:00
 
 # Set the number of threads based on cpus-per-task
